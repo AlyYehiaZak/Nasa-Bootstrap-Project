@@ -1,0 +1,196 @@
+*{
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.myFontFamily{
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.mynav_item:hover::first-letter{
+    color: rgb(0, 115, 255) !important;
+    font-size: 22px;
+}
+
+.sidebar{
+    position: fixed;
+    right: 0;
+    top:22%;
+    width: 70px;
+    height: 400px;
+    z-index: 10;
+}
+
+.slider{
+    width: 100%;
+    height: 350px;
+    background-image: url(../images/earthslider.jpg);
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+.slider2{
+    width: 100%;
+    height: 350px;
+    background-image: url(../images/slider2.jpg);
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+.planets_card{
+    position: relative;
+}
+
+.planets_card::before{
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0%;
+    height: 0%;
+
+    opacity: 1;
+    background-color: rgba(0, 89, 255,0.2);
+}
+
+.planets_card:hover::before{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: 0.8s;
+}
+
+.planets_card::after{
+    content: "";
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    width: 0%;
+    height: 0%;
+
+    opacity: 1;
+    background-color: rgba(0, 89, 255,0.2);
+}
+
+.planets_card:hover::after{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: 0.8s;
+}
+
+.organizations_cards{
+    width: 85%;
+    height: 550px;
+    position: relative;
+    transition: 0.8s;
+}
+
+.organizations_cards_overlay{
+    position: absolute;
+    background-color: rgba(2, 8, 29, 0.7);
+    z-index: 1;
+}
+
+.organizations_cards:hover .organizations_cards_overlay{
+    background-color: rgba(6, 23, 84, 0.7);
+}
+
+.organizations_cards:hover{
+    transform: scale(0.9);
+}
+
+.organizations_cards_content{
+    position: absolute;
+    z-index: 2;
+}
+
+.organizations_card1{
+    background-image: url(../images/spaceXBackground.jpg);
+    background-size:cover;
+    background-position: center -120px;
+}
+
+.organizations_card2{
+    background-image: url(../images/esaOverlay.png);
+    background-size:contain;
+    background-position: center 70px;
+}
+
+.organizations_card3{
+    background-image: url(../images/roscosmosBackground.png);
+    background-size:contain;
+    background-position: center 60px;
+}
+
+.custom_line{
+    width: 100px;
+    height: 5px;
+    transition: 0.5s;
+}
+
+.videos_container:hover .custom_line{
+    width: 150px;
+}
+
+.videos_image_container{
+    overflow: hidden;
+}
+
+.videos_image_container img{
+    transition: 0.5s;
+}
+
+.videos_container:hover .videos_image_container img{
+    transform: scale(1.1);
+}
+
+.follow_container:hover{
+    background-color:#1b1d1e !important;
+}
+
+/*/////// XL ////////*/
+@media (max-width:1200px){
+    .sidebar{
+        width: 60px;
+    }
+}
+
+/* ////// lg /////// */
+@media (max-width:992px){
+    .sidebar{
+        width: 45px;
+        height: 350px;
+    }
+
+    .sidebar button {
+        font-size: 25px !important;
+    }
+}
+
+/* ////// md /////// */
+@media (max-width:768px){
+    .img_accordion{
+        width: 50% !important;
+        height: 25% !important;
+    }
+}
+
+/* ////// Sm /////// */
+@media (max-width:576px){
+    .sidebar{
+        width: 35px;
+    }
+    .sidebar button {
+        font-size: 18px !important;
+        margin-bottom: 15px;
+    }
+}
+
